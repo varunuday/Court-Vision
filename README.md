@@ -129,7 +129,7 @@ To compile the application bundle for production environments (assets compiled, 
 ```bash
 npm run build
 ```
-Compiled production files are outputted inside `frontend/dist`, ready to serve or deploy to Netlify/Vercel.
+Compiled production files are outputted inside `frontend/dist`, ready to serve or deploy to Netlify.
 
 ## Testing
 

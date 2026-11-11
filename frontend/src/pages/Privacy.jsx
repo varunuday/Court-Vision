@@ -70,7 +70,7 @@ function Privacy() {
               so Google receives your IP address and browser information when the page loads.
             </p>
             <p>
-              The site is hosted on Vercel (frontend) and Render (API). Like any host, they
+              The site is hosted on Netlify (frontend) and Render (API). Like any host, they
               may keep standard server logs, such as your IP address and request time.
             </p>
             <p>NBA data comes from public sources fetched by our server, not by your browser.</p>

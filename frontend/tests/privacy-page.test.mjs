@@ -64,11 +64,12 @@ test("Privacy page describes account storage and third-party data handling", () 
   assert.match(page, /stored in our database only as a one-way hash/);
   assert.match(page, /deleted on logout or expire after 24 hours/);
   assert.doesNotMatch(page, /only in the server's memory/);
-  for (const provider of ["Google Fonts", "fonts.googleapis.com", "fonts.gstatic.com", "Vercel", "Render", "LinkedIn"]) {
+  for (const provider of ["Google Fonts", "fonts.googleapis.com", "fonts.gstatic.com", "Netlify", "Render", "LinkedIn"]) {
     assert.ok(page.includes(provider), `${provider} must be disclosed`);
   }
+  assert.doesNotMatch(page, /Vercel/);
   assert.match(page, /Google receives your IP address and browser information when the page loads/);
-  assert.match(page, /Vercel \(frontend\) and Render \(API\)/);
+  assert.match(page, /Netlify \(frontend\) and Render \(API\)/);
   assert.match(page, /may keep standard server logs, such as your IP address and request time/);
   assert.match(page, /public sources fetched by our server, not by your browser/);
   assert.match(page, /LinkedIn's own site and policies/);
